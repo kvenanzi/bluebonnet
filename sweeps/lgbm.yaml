@@ -1,0 +1,19 @@
+# W&B Sweep: LightGBM hyper-parameters (M3), each cell scored by leave-one-year-out on the
+# strength target. 24 cells. Register with `uv run scripts/07_sweep.py --create`, then run an
+# agent (Colab: notebooks/01_sweep_colab.ipynb; local: 07_sweep.py --agent <id>).
+# Selecting the cell on the same LOYO that reports it favours LightGBM; H4 predicts LightGBM
+# does not beat ridge, so the bias works against the prediction.
+name: lgbm-grid
+method: grid
+metric:
+  name: logit/rmse
+  goal: minimize
+parameters:
+  num_leaves:
+    values: [3, 7, 15]
+  learning_rate:
+    values: [0.03, 0.1]
+  n_estimators:
+    values: [100, 300]
+  min_child_samples:
+    values: [10, 30]
