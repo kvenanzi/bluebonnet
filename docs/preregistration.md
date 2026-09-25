@@ -88,3 +88,8 @@ The model used for the 2027 forecast is M4, fixed now, regardless of how the lad
 ## Change log
 
 - 2026-09-25: initial version.
+- 2026-09-25, before any county-level index, joined table, or model existed:
+  1. *County assignment (§2).* Both the numerator and the denominator are assigned to a county by the county place identifier iNaturalist attaches to each observation (the same membership rule the histogram endpoint uses for the denominator), rather than by a separate Census point-in-polygon test for the numerator. Counting both over the same polygon is the reason; records without a county place identifier (heavily obscured coordinates) are dropped from both.
+  2. *M4 predictors (§7).* §7 did not list M4's predictors. M4 uses the six non-overlapping predictors `fall_prcp`, `winter_prcp`, `winter_tavg`, `freeze_days`, `gdd_mar1`, `summer_pdsi`; `sepoct_prcp` and `octdec_prcp` are sub-windows of `fall_prcp` and remain in M2 and M3 only, as §7 states. Priors not given in §7: strength intercept N(−3.5, 2) (bluebonnets are about 3% of plant records), σ_c, σ_y ~ HalfNormal(1); timing intercept N(85, 15) days, β ~ N(0, 5) days per standard deviation, σ_c, σ_y, σ ~ HalfNormal(10), ν ~ Gamma(2, 0.1).
+  3. *October issue (§8).* "September 2026 observed as far as the data reach" is made concrete: the October issue uses nClimDiv through August 2026 (the release current on the issue date), so `summer_pdsi` is observed and every September–February month is drawn from the analogs. Station rainfall for September 2026 is reported in the post as description only.
+  4. *City Nature Challenge dates (§2).* 2016's challenge lasted eight days (14–21 April); all eight are masked.
