@@ -1,0 +1,33 @@
+[project]
+name = "bluebonnet"
+version = "0.1.0"
+requires-python = ">=3.11"
+# Lower bounds are deliberately loose so `pip install` on Colab keeps its
+# preinstalled numpy/pandas/scikit-learn; uv.lock pins exact versions locally.
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "requests>=2.31",
+    "scikit-learn>=1.4",
+    "lightgbm>=4.3",
+    "pymc>=5.16",
+    "arviz>=0.19",
+    "matplotlib>=3.8",
+    "pyyaml>=6.0",
+    "wandb>=0.19",
+    "wandb-workspaces>=0.4.11",
+    "huggingface_hub>=0.25",
+    "geopandas>=1.0",
+    "shapely>=2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bluebonnet"]
+
+[dependency-groups]
+dev = ["pytest>=8"]

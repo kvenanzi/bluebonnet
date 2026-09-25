@@ -1,0 +1,17 @@
+# Raw pulls and intermediate tables are rebuilt by scripts/01-03; only derived
+# county-season aggregates are published (Hugging Face dataset).
+data/
+*.duckdb
+*.duckdb.wal
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Experiment tracking and model outputs
+wandb/
+outputs/
+models/
+artifacts/
