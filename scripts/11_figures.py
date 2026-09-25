@@ -130,7 +130,7 @@ def fig_ladder() -> dict:
     """H4: CRPS skill relative to climatology for each rung, both targets."""
     summ = json.loads((LADDER / "summary.json").read_text())
     bsum = json.loads((BAYES / "summary.json").read_text())
-    fig, axes = plt.subplots(1, 2, figsize=(8.2, 3.6), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(9.0, 3.6))   # separate y axes: the M1b label differs
     out = {}
     for ax, target, second, lab in [(axes[0], "logit", "ols_winter_tavg", "strength"), (axes[1], "median_doy", "ols_gdd_mar1", "timing")]:
         names, skills = [], []
@@ -165,7 +165,7 @@ def fig_ladder() -> dict:
 def fig_coefficients() -> dict:
     """M4 posterior coefficients (90% intervals) for both targets."""
     bsum = json.loads((BAYES / "summary.json").read_text())
-    fig, axes = plt.subplots(1, 2, figsize=(8.0, 3.2), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(8.0, 3.2))
     out = {}
     for ax, target, lab in [(axes[0], "logit", "strength (logit per SD)"), (axes[1], "median_doy", "timing (days per SD)")]:
         f = bsum[target]["full"]
@@ -177,7 +177,7 @@ def fig_coefficients() -> dict:
         ax.hlines(y, lo, hi, color=SERIES[0], lw=2.2)
         ax.plot(m, y, "o", color=INK, ms=4)
         ax.axvline(0, color=BASELINE, lw=0.8)
-        ax.set_yticks(y, names)
+        ax.set_yticks(y, names if target == "logit" else [""] * len(names))
         ax.invert_yaxis()
         ax.set_xlabel(lab)
         style(ax, "x")

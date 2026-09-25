@@ -24,7 +24,7 @@ All weather predictors are z-scores: the county's departure from its 1991–2020
 
 ## 4. Gradient-boosted trees: LightGBM
 
-A regression tree splits the predictor space into boxes ("fall rain z > 0.8 and winter temperature z < −0.3") and predicts the mean of each box. Gradient boosting ([Friedman 2001]; LightGBM, [Ke et al 2017]) adds hundreds of small trees, each fit to the errors of the sum so far. Boosted trees capture interactions and thresholds without being told about them, which is why they usually win on large tabular datasets. With ten springs they have little to learn from, and a tree cannot extrapolate: above the largest fall rain it has seen, its prediction stays at the value of the last box. Hypothesis H4 predicts that LightGBM does not beat ridge here. Its hyper-parameters (tree size, learning rate, number of trees, minimum rows per leaf) are chosen by a W&B Sweep (`sweeps/lgbm.yaml`).
+A regression tree splits the predictor space into boxes ("fall rain z > 0.8 and winter temperature z < −0.3") and predicts the mean of each box. Gradient boosting (Friedman 2001, *The Annals of Statistics* 29(5):1189–1232; LightGBM, [Ke et al 2017]) adds hundreds of small trees, each fit to the errors of the sum so far. Boosted trees capture interactions and thresholds without being told about them, which is why they usually win on large tabular datasets. With ten springs they have little to learn from, and a tree cannot extrapolate: above the largest fall rain it has seen, its prediction stays at the value of the last box. Hypothesis H4 predicts that LightGBM does not beat ridge here. Its hyper-parameters (tree size, learning rate, number of trees, minimum rows per leaf) are chosen by a W&B Sweep (`sweeps/lgbm.yaml`).
 
 ## 5. Prediction intervals without a distributional model: CV+
 
@@ -33,7 +33,7 @@ A point prediction says nothing about its own uncertainty. **Conformal predictio
 1. For each training spring j, fit the model without j, record its residuals on spring j, and record its prediction for the test row.
 2. The test row's interval runs from the 10th percentile of {prediction without j − |residual|} to the 90th percentile of {prediction without j + |residual|}, over every inner spring j and every residual in it.
 
-The same set, with signed residuals, is used as a predictive ensemble to compute the CRPS (§7), so point models and the Bayesian model are scored on the same footing (`eval.cv_plus`). The guarantee assumes exchangeable springs; a spring unlike any of the ten (such as an out-of-range El Niño winter) is exactly where it can fail.
+The same set, with signed residuals, is used as a predictive ensemble to compute the CRPS (§7), so point models and the Bayesian model are scored by the same rule (`eval.cv_plus`). The guarantee assumes exchangeable springs; a spring unlike any of the ten (such as an out-of-range El Niño winter) is exactly where it can fail.
 
 ## 6. The hierarchical Bayesian model (M4)
 
@@ -47,7 +47,7 @@ logit μ = α + a[county] + b[spring] + X·β
 a ~ Normal(0, σ_c)     b ~ Normal(0, σ_y)     β ~ Normal(0, 1)
 ```
 
-- **Beta-Binomial likelihood.** `y` out of `n` is treated as counts, not a ratio, so a county-spring with 15 plant records carries less weight than one with 6,000 without a hand-set threshold. The Beta part (φ) allows more spread than pure coin-flipping, because observers do not sample plants independently.
+- **Beta-Binomial likelihood.** `y` out of `n` is treated as counts, not a ratio, so a county-spring with 15 plant records carries less weight than one with 6,000 without a hand-set threshold. The Beta part (φ) allows more spread than independent binomial sampling would produce, because observers do not sample plants independently.
 - **County effects `a` and partial pooling.** Each county has its own baseline, but the baselines are drawn from a common distribution whose width σ_c is also estimated. A county with little data is pulled toward the average; a county with much data keeps its own value. This is **partial pooling** ([Gelman & Hill 2007]), the middle ground between one model for all counties (complete pooling) and a separate model per county (no pooling). Hypothesis H5 tests whether it helps thin counties.
 - **Year effects `b`.** Everything that shifts all counties in a spring together, including unmeasured weather and changes in observer behavior, goes into `b`. The weather coefficients β are then identified from two sources: from differences between springs, and from differences between counties within the same spring. For a spring the model has not seen, `b` is unknown; each posterior draw takes a new `b ~ Normal(0, σ_y)` shared by all counties, which is why the forecast intervals are wide.
 - **Priors.** `β ~ Normal(0, 1)` on z-scored predictors says that a one-standard-deviation change in weather is unlikely to change the odds of a record being a bluebonnet by more than a factor of e² ≈ 7. The priors are stated in `preregistration.md` before fitting.

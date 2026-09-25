@@ -2,7 +2,7 @@
 
 Does fall rain predict the strength of the Texas bluebonnet (*Lupinus texensis*) bloom better than winter temperature does? This repository builds bloom targets from iNaturalist observations and predictors from NOAA weather for ten springs (2017–2026), tests that question with pre-registered hypotheses and a ladder of models scored by leave-one-year-out cross-validation, and issues a registered forecast for spring 2027 in seven Austin-area counties. The forecast is issued in October 2026, updated in December 2026 and March 2027, and graded in May 2027.
 
-**Status:** Part I (study and October forecast) in progress.
+**Status:** Part I written (study and the registered forecast `forecast-2026-10`, issued 2026-09-25). Updates due about 2026-12-05 and 2027-03-03; grading in May 2027.
 
 - Pre-registration: [`docs/preregistration.md`](docs/preregistration.md) (committed before any model was fit)
 - Independent year codes: [`docs/bloom-year-codes.md`](docs/bloom-year-codes.md)
