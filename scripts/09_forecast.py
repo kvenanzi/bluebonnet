@@ -22,6 +22,7 @@ import numpy as np
 import pandas as pd
 
 from bluebonnet import FORECAST_COUNTIES, POOLED, TRAIN_SPRINGS, bayes, data, forecast, models
+from bluebonnet.eval import loyo
 from bluebonnet.features import MODEL_PREDICTORS, PREDICTORS
 from bluebonnet.targets import empirical_logit
 
@@ -42,6 +43,7 @@ def main() -> None:
     ap.add_argument("--issue", required=True)
     ap.add_argument("--observed-through", required=True, help="YYYY-MM")
     ap.add_argument("--force", action="store_true", help="overwrite (only before the issue is published)")
+    ap.add_argument("--no-wandb", action="store_true")
     args = ap.parse_args()
     csv, meta_path = OUT / f"{args.issue}.csv", OUT / f"{args.issue}.json"
     if csv.exists() and not args.force:
@@ -111,6 +113,22 @@ def main() -> None:
                 rows.append(r)
         meta[f"draws_{target}"] = int(len(post["alpha"]))
 
+    # Comparator (preregistration change log item 5): trend-only, not the registered forecast.
+    tr = data.training(df, "logit").copy()
+    tr["trend"] = tr.spring - 2021.5
+    trend_model = models.ols("trend", ["trend"])
+    resid = loyo(trend_model, tr, "logit", intervals=False)
+    R = (resid.obs - resid.pred).values
+    slope = float(trend_model.fit(tr, "logit").estimator.coef_[0])
+    meta["trend_comparator"] = {"slope_logit_per_spring": slope, "residuals": int(len(R))}
+    for pid in pids + [0]:
+        hist = df[(df.place_id == pid) & df.spring.isin(TRAIN_SPRINGS)]
+        center = hist.logit.mean() + slope * (SPRING - 2021.5)
+        name = POOLED if pid == 0 else names[pid]
+        samples.append((name, "strength_logit_trend", center + R))
+        rows.append({"county": name, "target": "strength_logit_trend",
+                     **forecast.summarize_samples(center + R, forecast.terciles(hist.logit))})
+
     fc = pd.DataFrame(rows)
     fc.insert(0, "issue", args.issue)
     fc["included_in_training"] = fc.county.map(lambda c: c == POOLED or bool(train_rows.county.eq(c).any()))
@@ -142,6 +160,9 @@ def main() -> None:
     meta_path.write_text(json.dumps(meta, indent=2, default=str))
     print(fc[["county", "target", "q10", "q50", "q90", "p_below", "p_near", "p_above"]].to_string())
     print(f"\nwrote {csv}\nsha256 {sha}")
+    if not args.no_wandb:
+        from bluebonnet import wb
+        print(f"W&B run {wb.log_forecast(args.issue)}")
 
 
 if __name__ == "__main__":

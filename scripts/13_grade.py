@@ -30,7 +30,8 @@ from bluebonnet.targets import season_table
 ROOT = Path(__file__).resolve().parent.parent
 FC, OUT = ROOT / "forecasts", ROOT / "outputs" / "grade"
 ISSUES = ["forecast-2026-10", "forecast-2026-12", "forecast-2027-03"]
-TARGETS = {"strength_logit": "logit", "median_doy": "median_doy"}
+TARGETS = {"strength_logit": "logit", "median_doy": "median_doy",
+           "strength_logit_trend": "logit"}   # comparator (change log item 5), not a registered forecast
 
 
 def main() -> None:

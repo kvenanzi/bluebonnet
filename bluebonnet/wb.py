@@ -34,3 +34,23 @@ def log_loyo(run, target: str, pred: pd.DataFrame, summary: dict) -> None:
     run.log({f"{target}/loyo_predictions": wandb.Table(dataframe=pred[cols].round(4))})
     per = pred.assign(se=(pred.pred - pred.obs) ** 2).groupby("spring").se.mean().reset_index()
     run.log({f"{target}/mse_by_spring": wandb.Table(dataframe=per.round(5))})
+
+
+def log_forecast(issue: str) -> str:
+    """Log forecasts/<issue>.* as the W&B artifact bluebonnet-forecast:<issue>; returns the run id."""
+    import json
+    import wandb
+    from . import FORECAST_ARTIFACT
+    fc = ROOT / "forecasts"
+    meta = json.loads((fc / f"{issue}.json").read_text())
+    run = init(f"{issue}", "forecast", {"issue": issue, "observed_through": meta["observed_through"]}, group="forecast")
+    art = wandb.Artifact(FORECAST_ARTIFACT, type="forecast", metadata={
+        "issue": issue, "csv_sha256": meta["csv_sha256"], "samples_sha256": meta["samples_sha256"],
+        "observed_through": meta["observed_through"], "analog_springs": meta["analog_springs"]})
+    for suffix in [".csv", ".json", "-samples.parquet"]:
+        art.add_file(str(fc / f"{issue}{suffix}"))
+    run.log_artifact(art, aliases=[issue, "latest"])
+    df = pd.read_csv(fc / f"{issue}.csv")
+    run.log({"forecast": wandb.Table(dataframe=df.round(4))})
+    run.finish()
+    return run.id

@@ -48,10 +48,12 @@ def main() -> None:
         score_rows = data.training(df, target)
         preds, diags = [], []
         for k in TRAIN_SPRINGS:
+            test = score_rows[score_rows.spring == k]
+            if test.empty:                      # e.g. timing in 2017: no county reached 50 records
+                continue
             fitted = bayes.fit(rows[rows.spring != k], model_target(target), MODEL_PREDICTORS, seed=k, **sampler)
             d = bayes.diagnostics(fitted)
             diags.append({"spring": k, **{x: d[x] for x in ["rhat_max", "ess_bulk_min", "divergences"]}})
-            test = score_rows[score_rows.spring == k]
             samples, _, _ = bayes.predict_new_spring(fitted, test, seed=k)
             res = test[["place_id", "county", "spring", target]].rename(columns={target: "obs"}).copy()
             res["pred"] = np.median(samples, axis=1)
