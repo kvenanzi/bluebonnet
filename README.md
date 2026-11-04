@@ -8,7 +8,8 @@ Does fall rain predict the strength of the Texas bluebonnet (*Lupinus texensis*)
 - Independent year codes: [`docs/bloom-year-codes.md`](docs/bloom-year-codes.md)
 - Registered forecasts: [`forecasts/`](forecasts/)
 - Primers: [modeling](docs/modeling-primer.md), [phenology and data](docs/phenology-primer.md)
-- Write-up: [`docs/post/README.md`](docs/post/README.md)
+- Write-up: [`docs/post/README.md`](docs/post/README.md), published at [withinnoise.dev/blog/posts/bluebonnet-bloom-forecast](https://withinnoise.dev/blog/posts/bluebonnet-bloom-forecast/)
+- Data and models: [dataset](https://huggingface.co/datasets/kvenanzi/texas-bluebonnet-seasons), [model](https://huggingface.co/kvenanzi/bluebonnet-bloom-forecast)
 
 ## Layout
 

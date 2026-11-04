@@ -47,7 +47,8 @@ Sources: iNaturalist (observation counts via the public API; the research-grade 
 at GBIF, doi:10.15468/ab3s5x); NOAA NCEI nClimDiv and GHCN-Daily (public domain). The table holds
 aggregate counts only, so no observation, photograph, or observer is redistributed.
 
-Code and write-up: https://github.com/kvenanzi/bluebonnet
+Write-up: https://withinnoise.dev/blog/posts/bluebonnet-bloom-forecast/
+Code, pre-registration history, and the forecast tag: https://github.com/kvenanzi/bluebonnet
 """
 
 MODEL_CARD = """---
@@ -70,7 +71,8 @@ Load a posterior with `arviz.from_netcdf("full_logit.nc")`. Predictors are count
 1991–2020 (see the dataset card). With ten springs, the between-year evidence is thin; read the
 leave-one-year-out skill in `metrics.json` before using any forecast.
 
-Write-up and code: https://github.com/kvenanzi/bluebonnet
+Write-up: https://withinnoise.dev/blog/posts/bluebonnet-bloom-forecast/
+Code: https://github.com/kvenanzi/bluebonnet
 """
 
 

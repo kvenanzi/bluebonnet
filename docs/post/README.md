@@ -2,7 +2,7 @@
 
 | created | modified | status | confidence | importance |
 |---|---|---|---|---|
-| 2026-09-25 | 2026-09-25 | in progress | possible[^conf] | 3 |
+| 2026-09-25 | 2026-11-04 | in progress | possible[^conf] | 3 |
 
 > **Abstract.** Each spring, published wildflower forecasts for Central Texas attribute a strong Texas bluebonnet (*Lupinus texensis*) bloom to fall rain and treat winter temperature as a matter of timing. No peer-reviewed field study was found that measures either claim for this species. I test both claims with seven hypotheses committed to the project's git repository before any model was fit. Bloom strength is measured per county and spring as the share of all verifiable iNaturalist plant observations, 1 February–30 April, that are bluebonnets. Timing is measured as the effort-weighted median observation date. The data are 23,527 bluebonnet records in 15 Texas counties over ten springs (2017–2026), joined to NOAA county weather. The effort-normalized index agrees with independent published descriptions of each spring (Spearman ρ = 0.76, n = 10; the two lowest springs, 2025 and 2026, are the two described as poor). For strength, fall precipitation and winter mean temperature are **not distinguishable** under leave-one-year-out cross-validation: the paired difference in mean squared error is +0.011 in favor of fall rain (95% CI −0.018 to +0.043), and neither predictor, nor any of eight models including a hierarchical Bayesian model and a tuned gradient-boosted tree, predicts county bloom strength better than each county's own average (best CRPS skill −0.034). For timing, the order predicted by the published claims holds: growing degree days to 1 March predict the median date better than fall rain, by 0.78 days of mean absolute error (95% CI 0.15–1.48; 8 of 9 springs), and improve on climatology by 11% in CRPS. Two unregistered observations qualify the null result for strength: over the pooled seven-county Austin region, fall rain correlates with the index across springs (r = 0.63), and a downward trend of 0.05 logit per spring predicts county strength better than any weather variable. The pre-registered model's forecast for spring 2027, issued 25 September 2026 with every fall and winter month drawn from 26 El Niño analog seasons, places the Central Texas median date at 20 March (80% interval 13–28 March) and the strength index at 20.7 records per 1,000 plant records (13.3–31.2). The forecast is committed with its SHA-256, will be revised in December and March as fall and winter are observed, and will be graded in May 2027.
 
@@ -349,7 +349,7 @@ All work was done on 25 September 2026, in the order below. Run identifiers are 
 | Forecast samples committed, not only quantiles | CRPS in May needs the full distribution |
 | Grading code committed with the forecast | The rules must exist before the outcome |
 | Aggregate counts only on Hugging Face | Individual observations carry their observers' licenses |
-| Sweep run locally rather than in Colab | The repository is private, so Colab cannot clone it; the Colab notebook is ready for a replication once it is public |
+| Sweep run locally rather than in Colab | The repository was private when the sweep ran, so Colab could not clone it; it is now public, and the Colab notebook can be used for a replication |
 
 ## References
 
