@@ -1,0 +1,2201 @@
+{
+ "source": "W&B project within-noise/bluebonnet-bloom, exported 2026-11-04T22:33:02+00:00",
+ "n_runs": 48,
+ "runs": [
+  {
+   "id": "tt9pukxx",
+   "name": "upload-seasons",
+   "group": null,
+   "job_type": "dataset",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:53:11Z",
+   "config": {},
+   "summary": {}
+  },
+  {
+   "id": "8ris1j30",
+   "name": "climatology-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:55:21Z",
+   "config": {
+    "name": "B0 climatology",
+    "rows": 143,
+    "model": "climatology",
+    "target": "logit"
+   },
+   "summary": {
+    "full_fit": {},
+    "logit/cov80": 0.888112,
+    "logit/crps": 0.200153,
+    "logit/crps_skill": 0,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_07da41234413972b5293.table.json"
+    },
+    "logit/mae": 0.267283,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_e4aa13cb29d8ea0d6234.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.362436,
+    "logit/rmse_skill": 0,
+    "logit/width80": 1.259315
+   }
+  },
+  {
+   "id": "re6xxfct",
+   "name": "persistence-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:55:25Z",
+   "config": {
+    "name": "B1 persistence",
+    "rows": 143,
+    "model": "persistence",
+    "target": "logit"
+   },
+   "summary": {
+    "full_fit": {},
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.259138,
+    "logit/crps_skill": -0.294696,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_b5a8e5ecc9f13b6ed060.table.json"
+    },
+    "logit/mae": 0.347118,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_ede2dd09c17b1b31d2e7.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.473271,
+    "logit/rmse_skill": -0.305806,
+    "logit/width80": 1.511231
+   }
+  },
+  {
+   "id": "24o247ss",
+   "name": "ols_fall_prcp-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:55:28Z",
+   "config": {
+    "name": "M1a OLS fall_prcp",
+    "rows": 143,
+    "model": "ols_fall_prcp",
+    "target": "logit",
+    "features": [
+     "fall_prcp"
+    ]
+   },
+   "summary": {
+    "full_fit.coef.fall_prcp": 0.04694,
+    "full_fit.intercept": 0.016464,
+    "logit/cov80": 0.888112,
+    "logit/crps": 0.206889,
+    "logit/crps_skill": -0.033653,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_4fc5fa34fcaa68d923b3.table.json"
+    },
+    "logit/mae": 0.271308,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_ecb91b4844c458a15801.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.368038,
+    "logit/rmse_skill": -0.015457,
+    "logit/width80": 1.287143
+   }
+  },
+  {
+   "id": "3icav9nj",
+   "name": "ols_winter_tavg-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:55:31Z",
+   "config": {
+    "name": "M1b OLS winter_tavg",
+    "rows": 143,
+    "model": "ols_winter_tavg",
+    "target": "logit",
+    "features": [
+     "winter_tavg"
+    ]
+   },
+   "summary": {
+    "full_fit.coef.winter_tavg": -0.05995,
+    "full_fit.intercept": 0.031796,
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.209091,
+    "logit/crps_skill": -0.044655,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_f1b6e0084285c60d24b1.table.json"
+    },
+    "logit/mae": 0.28523,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_e662e33dbdd48eeeefe1.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.379391,
+    "logit/rmse_skill": -0.046781,
+    "logit/width80": 1.300719
+   }
+  },
+  {
+   "id": "5pl270yg",
+   "name": "ridge-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:55:55Z",
+   "config": {
+    "name": "M2 ridge",
+    "rows": 143,
+    "model": "ridge",
+    "target": "logit",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit.alpha": 1000,
+    "full_fit.coef.fall_prcp": 0.00384,
+    "full_fit.coef.freeze_days": 0.00135,
+    "full_fit.coef.gdd_mar1": -0.00291,
+    "full_fit.coef.octdec_prcp": 0.00482,
+    "full_fit.coef.sepoct_prcp": 0.00538,
+    "full_fit.coef.summer_pdsi": 0.00356,
+    "full_fit.coef.winter_prcp": 0.00683,
+    "full_fit.coef.winter_tavg": -0.00571,
+    "full_fit.intercept": 0.010236,
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.220087,
+    "logit/crps_skill": -0.099594,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_880eabd1c01f345e31fb.table.json"
+    },
+    "logit/mae": 0.296374,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_87462af6a1b9431e5814.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.399978,
+    "logit/rmse_skill": -0.103584,
+    "logit/width80": 1.421422
+   }
+  },
+  {
+   "id": "ewo62frr",
+   "name": "elastic_net-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:31Z",
+   "config": {
+    "name": "M2 elastic net",
+    "rows": 143,
+    "model": "elastic_net",
+    "target": "logit",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit.alpha": 0.177828,
+    "full_fit.coef.fall_prcp": 0,
+    "full_fit.coef.freeze_days": 0,
+    "full_fit.coef.gdd_mar1": 0,
+    "full_fit.coef.octdec_prcp": 0,
+    "full_fit.coef.sepoct_prcp": 0,
+    "full_fit.coef.summer_pdsi": 0,
+    "full_fit.coef.winter_prcp": 0,
+    "full_fit.coef.winter_tavg": 0,
+    "full_fit.intercept": -0.0,
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.21195,
+    "logit/crps_skill": -0.058936,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_4de993c3c39458b0e7f1.table.json"
+    },
+    "logit/mae": 0.268713,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_8ecfe2b1a8ed55a97c24.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.364767,
+    "logit/rmse_skill": -0.006433,
+    "logit/width80": 1.399647
+   }
+  },
+  {
+   "id": "s9l5ufe2",
+   "name": "lightgbm-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:36Z",
+   "config": {
+    "name": "M3 LightGBM",
+    "rows": 143,
+    "model": "lightgbm",
+    "target": "logit",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit": {},
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.241761,
+    "logit/crps_skill": -0.207881,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_c13f503739b9398aa122.table.json"
+    },
+    "logit/mae": 0.351336,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_ad88820b3236dd68716e.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.454032,
+    "logit/rmse_skill": -0.252725,
+    "logit/width80": 1.515606
+   }
+  },
+  {
+   "id": "mcdq2sl2",
+   "name": "per_county_fall_prcp-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:41Z",
+   "config": {
+    "name": "per-county OLS",
+    "rows": 143,
+    "model": "per_county_fall_prcp",
+    "target": "logit",
+    "features": [
+     "fall_prcp"
+    ]
+   },
+   "summary": {
+    "full_fit": {},
+    "logit/cov80": 0.916084,
+    "logit/crps": 0.233661,
+    "logit/crps_skill": -0.167411,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_1330f2f890c61676c1dd.table.json"
+    },
+    "logit/mae": 0.30754,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_9852bbcbd6425c013275.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.420086,
+    "logit/rmse_skill": -0.159062,
+    "logit/width80": 1.576144
+   }
+  },
+  {
+   "id": "wyvluwli",
+   "name": "climatology-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:44Z",
+   "config": {
+    "name": "B0 climatology",
+    "rows": 82,
+    "model": "climatology",
+    "target": "median_doy"
+   },
+   "summary": {
+    "full_fit": {},
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.912896,
+    "median_doy/crps_skill": 0,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_57eccbc49595131ad01d.table.json"
+    },
+    "median_doy/mae": 5.304297,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_d28fc192666286a9f4b5.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.006278,
+    "median_doy/rmse_skill": 0,
+    "median_doy/width80": 22.495703
+   }
+  },
+  {
+   "id": "nuza5vce",
+   "name": "persistence-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:48Z",
+   "config": {
+    "name": "B1 persistence",
+    "rows": 82,
+    "model": "persistence",
+    "target": "median_doy"
+   },
+   "summary": {
+    "full_fit": {},
+    "median_doy/cov80": 0.914634,
+    "median_doy/crps": 4.950324,
+    "median_doy/crps_skill": -0.26513,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_7fbe26fdf0d18f68f201.table.json"
+    },
+    "median_doy/mae": 6.476699,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_b85ecb27ede80865793b.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 8.480203,
+    "median_doy/rmse_skill": -0.210372,
+    "median_doy/width80": 26.467726
+   }
+  },
+  {
+   "id": "raa9n0hg",
+   "name": "ols_fall_prcp-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:51Z",
+   "config": {
+    "name": "M1a OLS fall_prcp",
+    "rows": 82,
+    "model": "ols_fall_prcp",
+    "target": "median_doy",
+    "features": [
+     "fall_prcp"
+    ]
+   },
+   "summary": {
+    "full_fit.coef.fall_prcp": -0.57518,
+    "full_fit.intercept": -0.198362,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.968523,
+    "median_doy/crps_skill": -0.014216,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_463e693d0cd88fd4930a.table.json"
+    },
+    "median_doy/mae": 5.401456,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_e3c13e04c7d2538026d7.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.02724,
+    "median_doy/rmse_skill": -0.002992,
+    "median_doy/width80": 23.023042
+   }
+  },
+  {
+   "id": "43su0s0x",
+   "name": "ols_gdd_mar1-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:56:54Z",
+   "config": {
+    "name": "M1b OLS gdd_mar1",
+    "rows": 82,
+    "model": "ols_gdd_mar1",
+    "target": "median_doy",
+    "features": [
+     "gdd_mar1"
+    ]
+   },
+   "summary": {
+    "full_fit.coef.gdd_mar1": -2.34069,
+    "full_fit.intercept": 0.494401,
+    "median_doy/cov80": 0.914634,
+    "median_doy/crps": 3.466605,
+    "median_doy/crps_skill": 0.114056,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_60cfb7ac7ea0c1180e7d.table.json"
+    },
+    "median_doy/mae": 4.602773,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_1e0b90227e23c18b0d02.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.557964,
+    "median_doy/rmse_skill": 0.063987,
+    "median_doy/width80": 21.329345
+   }
+  },
+  {
+   "id": "29xo3er8",
+   "name": "ridge-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:57:12Z",
+   "config": {
+    "name": "M2 ridge",
+    "rows": 82,
+    "model": "ridge",
+    "target": "median_doy",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit.alpha": 25.118864,
+    "full_fit.coef.fall_prcp": -0.23185,
+    "full_fit.coef.freeze_days": 0.25376,
+    "full_fit.coef.gdd_mar1": -1.21215,
+    "full_fit.coef.octdec_prcp": -0.36684,
+    "full_fit.coef.sepoct_prcp": -0.09792,
+    "full_fit.coef.summer_pdsi": -0.19684,
+    "full_fit.coef.winter_prcp": -0.33007,
+    "full_fit.coef.winter_tavg": -1.2348,
+    "full_fit.intercept": 0.535568,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.610945,
+    "median_doy/crps_skill": 0.077168,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_7fa5a920a9053bae4024.table.json"
+    },
+    "median_doy/mae": 4.817388,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_ec4df19813afe4dc8a9a.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.650845,
+    "median_doy/rmse_skill": 0.050731,
+    "median_doy/width80": 21.98259
+   }
+  },
+  {
+   "id": "oq47sw14",
+   "name": "elastic_net-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:57:39Z",
+   "config": {
+    "name": "M2 elastic net",
+    "rows": 82,
+    "model": "elastic_net",
+    "target": "median_doy",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit.alpha": 0.562341,
+    "full_fit.coef.fall_prcp": -0.14408,
+    "full_fit.coef.freeze_days": 0.24289,
+    "full_fit.coef.gdd_mar1": -1.0274,
+    "full_fit.coef.octdec_prcp": -0.24027,
+    "full_fit.coef.sepoct_prcp": -0.08163,
+    "full_fit.coef.summer_pdsi": 0,
+    "full_fit.coef.winter_prcp": -0.07008,
+    "full_fit.coef.winter_tavg": -0.96032,
+    "full_fit.intercept": 0.583261,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.617059,
+    "median_doy/crps_skill": 0.075606,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_6df988c85b9cba9cdb5e.table.json"
+    },
+    "median_doy/mae": 4.867166,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_dac9a350c832d3c66bf4.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.742756,
+    "median_doy/rmse_skill": 0.037612,
+    "median_doy/width80": 22.053203
+   }
+  },
+  {
+   "id": "ha42hts0",
+   "name": "lightgbm-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:57:45Z",
+   "config": {
+    "name": "M3 LightGBM",
+    "rows": 82,
+    "model": "lightgbm",
+    "target": "median_doy",
+    "features": [
+     "fall_prcp",
+     "sepoct_prcp",
+     "octdec_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ]
+   },
+   "summary": {
+    "full_fit": {},
+    "median_doy/cov80": 0.914634,
+    "median_doy/crps": 3.569163,
+    "median_doy/crps_skill": 0.087846,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_011f40bc8bfd30fe2d9e.table.json"
+    },
+    "median_doy/mae": 4.801259,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_ac88f40b347a599d23d9.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.14882,
+    "median_doy/rmse_skill": -0.020345,
+    "median_doy/width80": 23.803386
+   }
+  },
+  {
+   "id": "725jmbk2",
+   "name": "per_county_fall_prcp-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T14:57:49Z",
+   "config": {
+    "name": "per-county OLS",
+    "rows": 82,
+    "model": "per_county_fall_prcp",
+    "target": "median_doy",
+    "features": [
+     "fall_prcp"
+    ]
+   },
+   "summary": {
+    "full_fit": {},
+    "median_doy/cov80": 0.926829,
+    "median_doy/crps": 4.916879,
+    "median_doy/crps_skill": -0.256583,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_ee4eae8c7a02605b499f.table.json"
+    },
+    "median_doy/mae": 6.687675,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_fa86016e9f24541c9e2c.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 8.911236,
+    "median_doy/rmse_skill": -0.271893,
+    "median_doy/width80": 31.61284
+   }
+  },
+  {
+   "id": "kjwthy20",
+   "name": "fanciful-sweep-1",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "ciaznjx1",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:01Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.223811,
+    "logit/crps_skill": -0.118198,
+    "logit/mae": 0.30899,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.407828,
+    "logit/rmse_skill": -0.125242,
+    "logit/width80": 1.408229,
+    "median_doy/cov80": 0.914634,
+    "median_doy/crps": 3.656085,
+    "median_doy/crps_skill": 0.065632,
+    "median_doy/mae": 4.915563,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.898124,
+    "median_doy/rmse_skill": 0.015437,
+    "median_doy/width80": 23.102104
+   }
+  },
+  {
+   "id": "zf32p46r",
+   "name": "ancient-sweep-1",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:19Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.223811,
+    "logit/crps_skill": -0.118198,
+    "logit/mae": 0.30899,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.407828,
+    "logit/rmse_skill": -0.125242,
+    "logit/width80": 1.408229,
+    "median_doy/cov80": 0.914634,
+    "median_doy/crps": 3.656085,
+    "median_doy/crps_skill": 0.065632,
+    "median_doy/mae": 4.915563,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.898124,
+    "median_doy/rmse_skill": 0.015437,
+    "median_doy/width80": 23.102104
+   }
+  },
+  {
+   "id": "xa6mz05y",
+   "name": "skilled-sweep-2",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:25Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.236242,
+    "logit/crps_skill": -0.180307,
+    "logit/mae": 0.334202,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.435308,
+    "logit/rmse_skill": -0.201062,
+    "logit/width80": 1.449749,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.670199,
+    "median_doy/crps_skill": 0.062025,
+    "median_doy/mae": 4.914592,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.944281,
+    "median_doy/rmse_skill": 0.008849,
+    "median_doy/width80": 23.187579
+   }
+  },
+  {
+   "id": "jtk6fyl2",
+   "name": "fresh-sweep-3",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:30Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.236432,
+    "logit/crps_skill": -0.181254,
+    "logit/mae": 0.333111,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.434379,
+    "logit/rmse_skill": -0.198499,
+    "logit/width80": 1.453354,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.670199,
+    "median_doy/crps_skill": 0.062025,
+    "median_doy/mae": 4.914592,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.944281,
+    "median_doy/rmse_skill": 0.008849,
+    "median_doy/width80": 23.187579
+   }
+  },
+  {
+   "id": "d23nkho9",
+   "name": "clear-sweep-4",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:36Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.250937,
+    "logit/crps_skill": -0.253723,
+    "logit/mae": 0.354855,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.461656,
+    "logit/rmse_skill": -0.27376,
+    "logit/width80": 1.535985,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.842781,
+    "median_doy/crps_skill": 0.017919,
+    "median_doy/mae": 5.216027,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.151079,
+    "median_doy/rmse_skill": -0.020667,
+    "median_doy/width80": 25.043161
+   }
+  },
+  {
+   "id": "9fm34ec3",
+   "name": "lemon-sweep-5",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:46Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.262306,
+    "logit/crps_skill": -0.310526,
+    "logit/mae": 0.375362,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.48477,
+    "logit/rmse_skill": -0.337533,
+    "logit/width80": 1.582366,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.848635,
+    "median_doy/crps_skill": 0.016423,
+    "median_doy/mae": 5.201993,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.187696,
+    "median_doy/rmse_skill": -0.025894,
+    "median_doy/width80": 25.2547
+   }
+  },
+  {
+   "id": "9ervyzju",
+   "name": "autumn-sweep-6",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:58:57Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.262321,
+    "logit/crps_skill": -0.310601,
+    "logit/mae": 0.374075,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.482436,
+    "logit/rmse_skill": -0.331095,
+    "logit/width80": 1.582291,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.848635,
+    "median_doy/crps_skill": 0.016423,
+    "median_doy/mae": 5.201993,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.187696,
+    "median_doy/rmse_skill": -0.025894,
+    "median_doy/width80": 25.2547
+   }
+  },
+  {
+   "id": "brh7b0f2",
+   "name": "curious-sweep-7",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:08Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.209966,
+    "logit/crps_skill": -0.049026,
+    "logit/mae": 0.291816,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.386574,
+    "logit/rmse_skill": -0.0666,
+    "logit/width80": 1.314308,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.900251,
+    "median_doy/crps_skill": 0.003232,
+    "median_doy/mae": 4.964649,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.805678,
+    "median_doy/rmse_skill": 0.028631,
+    "median_doy/width80": 22.46302
+   }
+  },
+  {
+   "id": "ybga8t54",
+   "name": "drawn-sweep-8",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:13Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.209966,
+    "logit/crps_skill": -0.049026,
+    "logit/mae": 0.291816,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.386574,
+    "logit/rmse_skill": -0.0666,
+    "logit/width80": 1.314308,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.900251,
+    "median_doy/crps_skill": 0.003232,
+    "median_doy/mae": 4.964649,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.805678,
+    "median_doy/rmse_skill": 0.028631,
+    "median_doy/width80": 22.46302
+   }
+  },
+  {
+   "id": "o7kqmhht",
+   "name": "firm-sweep-9",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:19Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.209966,
+    "logit/crps_skill": -0.049026,
+    "logit/mae": 0.291816,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.386574,
+    "logit/rmse_skill": -0.0666,
+    "logit/width80": 1.314308,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.900251,
+    "median_doy/crps_skill": 0.003232,
+    "median_doy/mae": 4.964649,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.805678,
+    "median_doy/rmse_skill": 0.028631,
+    "median_doy/width80": 22.46302
+   }
+  },
+  {
+   "id": "pxi9039r",
+   "name": "drawn-sweep-10",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:24Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.219226,
+    "logit/crps_skill": -0.095292,
+    "logit/mae": 0.310707,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.409001,
+    "logit/rmse_skill": -0.12848,
+    "logit/width80": 1.356529,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.889541,
+    "median_doy/crps_skill": 0.005969,
+    "median_doy/mae": 4.774598,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.751076,
+    "median_doy/rmse_skill": 0.036425,
+    "median_doy/width80": 22.442266
+   }
+  },
+  {
+   "id": "lbz7gheb",
+   "name": "treasured-sweep-11",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:31Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.219226,
+    "logit/crps_skill": -0.095292,
+    "logit/mae": 0.310707,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.409001,
+    "logit/rmse_skill": -0.12848,
+    "logit/width80": 1.356529,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.889541,
+    "median_doy/crps_skill": 0.005969,
+    "median_doy/mae": 4.774598,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.751076,
+    "median_doy/rmse_skill": 0.036425,
+    "median_doy/width80": 22.442266
+   }
+  },
+  {
+   "id": "tmq9qfow",
+   "name": "summer-sweep-12",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:37Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 300,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.219226,
+    "logit/crps_skill": -0.095292,
+    "logit/mae": 0.310707,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.409001,
+    "logit/rmse_skill": -0.12848,
+    "logit/width80": 1.356529,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.889541,
+    "median_doy/crps_skill": 0.005969,
+    "median_doy/mae": 4.774598,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.751076,
+    "median_doy/rmse_skill": 0.036425,
+    "median_doy/width80": 22.442266
+   }
+  },
+  {
+   "id": "332ts5m8",
+   "name": "unique-sweep-13",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:42Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.256417,
+    "logit/crps_skill": -0.281105,
+    "logit/mae": 0.364275,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.475497,
+    "logit/rmse_skill": -0.311949,
+    "logit/width80": 1.56164,
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.890479,
+    "median_doy/crps_skill": 0.005729,
+    "median_doy/mae": 5.269947,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.197604,
+    "median_doy/rmse_skill": -0.027308,
+    "median_doy/width80": 25.664634
+   }
+  },
+  {
+   "id": "2ch4ot3v",
+   "name": "pleasant-sweep-14",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:48Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.264371,
+    "logit/crps_skill": -0.320843,
+    "logit/mae": 0.381594,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.491197,
+    "logit/rmse_skill": -0.355267,
+    "logit/width80": 1.610632,
+    "median_doy/cov80": 0.926829,
+    "median_doy/crps": 3.90342,
+    "median_doy/crps_skill": 0.002422,
+    "median_doy/mae": 5.232791,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.226116,
+    "median_doy/rmse_skill": -0.031377,
+    "median_doy/width80": 25.891329
+   }
+  },
+  {
+   "id": "1pzfgfaj",
+   "name": "comic-sweep-15",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:54Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.888112,
+    "logit/crps": 0.264363,
+    "logit/crps_skill": -0.320805,
+    "logit/mae": 0.376009,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.48579,
+    "logit/rmse_skill": -0.340348,
+    "logit/width80": 1.607906,
+    "median_doy/cov80": 0.926829,
+    "median_doy/crps": 3.90342,
+    "median_doy/crps_skill": 0.002422,
+    "median_doy/mae": 5.232791,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.226116,
+    "median_doy/rmse_skill": -0.031377,
+    "median_doy/width80": 25.891329
+   }
+  },
+  {
+   "id": "87i0nix9",
+   "name": "sage-sweep-16",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T14:59:59Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.916084,
+    "logit/crps": 0.286115,
+    "logit/crps_skill": -0.429479,
+    "logit/mae": 0.40349,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.521667,
+    "logit/rmse_skill": -0.439338,
+    "logit/width80": 1.704351,
+    "median_doy/cov80": 0.926829,
+    "median_doy/crps": 4.150525,
+    "median_doy/crps_skill": -0.06073,
+    "median_doy/mae": 5.616005,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.523971,
+    "median_doy/rmse_skill": -0.07389,
+    "median_doy/width80": 28.521288
+   }
+  },
+  {
+   "id": "xzhedynf",
+   "name": "volcanic-sweep-17",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:05Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.285736,
+    "logit/crps_skill": -0.427587,
+    "logit/mae": 0.407523,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.524337,
+    "logit/rmse_skill": -0.446703,
+    "logit/width80": 1.70641,
+    "median_doy/cov80": 0.939024,
+    "median_doy/crps": 4.147036,
+    "median_doy/crps_skill": -0.059838,
+    "median_doy/mae": 5.673824,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.641335,
+    "median_doy/rmse_skill": -0.090641,
+    "median_doy/width80": 28.695113
+   }
+  },
+  {
+   "id": "fof7zw9l",
+   "name": "stellar-sweep-18",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:16Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 10
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.284616,
+    "logit/crps_skill": -0.421988,
+    "logit/mae": 0.403702,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.516292,
+    "logit/rmse_skill": -0.424506,
+    "logit/width80": 1.71128,
+    "median_doy/cov80": 0.939024,
+    "median_doy/crps": 4.147036,
+    "median_doy/crps_skill": -0.059838,
+    "median_doy/mae": 5.673824,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 7.641335,
+    "median_doy/rmse_skill": -0.090641,
+    "median_doy/width80": 28.695113
+   }
+  },
+  {
+   "id": "y5u8fxiy",
+   "name": "azure-sweep-19",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:31Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.220691,
+    "logit/crps_skill": -0.102609,
+    "logit/mae": 0.314293,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.414582,
+    "logit/rmse_skill": -0.143879,
+    "logit/width80": 1.378128,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.881279,
+    "median_doy/crps_skill": 0.00808,
+    "median_doy/mae": 4.756072,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.710199,
+    "median_doy/rmse_skill": 0.042259,
+    "median_doy/width80": 22.463091
+   }
+  },
+  {
+   "id": "p0kd3yxx",
+   "name": "worldly-sweep-20",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:44Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.220691,
+    "logit/crps_skill": -0.102609,
+    "logit/mae": 0.314293,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.414582,
+    "logit/rmse_skill": -0.143879,
+    "logit/width80": 1.378128,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.881279,
+    "median_doy/crps_skill": 0.00808,
+    "median_doy/mae": 4.756072,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.710199,
+    "median_doy/rmse_skill": 0.042259,
+    "median_doy/width80": 22.463091
+   }
+  },
+  {
+   "id": "0r824q0t",
+   "name": "ethereal-sweep-21",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:50Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 100,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.895105,
+    "logit/crps": 0.220691,
+    "logit/crps_skill": -0.102609,
+    "logit/mae": 0.314293,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.414582,
+    "logit/rmse_skill": -0.143879,
+    "logit/width80": 1.378128,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.881279,
+    "median_doy/crps_skill": 0.00808,
+    "median_doy/mae": 4.756072,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.710199,
+    "median_doy/rmse_skill": 0.042259,
+    "median_doy/width80": 22.463091
+   }
+  },
+  {
+   "id": "5hpd22nq",
+   "name": "fresh-sweep-22",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:00:55Z",
+   "config": {
+    "num_leaves": 3,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.237055,
+    "logit/crps_skill": -0.184369,
+    "logit/mae": 0.349936,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.461282,
+    "logit/rmse_skill": -0.272728,
+    "logit/width80": 1.473747,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.861374,
+    "median_doy/crps_skill": 0.013167,
+    "median_doy/mae": 4.839276,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.830889,
+    "median_doy/rmse_skill": 0.025033,
+    "median_doy/width80": 22.462999
+   }
+  },
+  {
+   "id": "p33yd1yf",
+   "name": "soft-sweep-23",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:01:01Z",
+   "config": {
+    "num_leaves": 7,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.237055,
+    "logit/crps_skill": -0.184369,
+    "logit/mae": 0.349936,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.461282,
+    "logit/rmse_skill": -0.272728,
+    "logit/width80": 1.473747,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.861374,
+    "median_doy/crps_skill": 0.013167,
+    "median_doy/mae": 4.839276,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.830889,
+    "median_doy/rmse_skill": 0.025033,
+    "median_doy/width80": 22.462999
+   }
+  },
+  {
+   "id": "xs4u36f1",
+   "name": "trim-sweep-24",
+   "group": null,
+   "job_type": "sweep",
+   "state": "finished",
+   "sweep": "46na5ws9",
+   "tags": [
+    "local",
+    "sweep"
+   ],
+   "notes": null,
+   "created_at": "2026-09-25T15:01:07Z",
+   "config": {
+    "num_leaves": 15,
+    "n_estimators": 300,
+    "learning_rate": 0.1,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.909091,
+    "logit/crps": 0.237055,
+    "logit/crps_skill": -0.184369,
+    "logit/mae": 0.349936,
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.461282,
+    "logit/rmse_skill": -0.272728,
+    "logit/width80": 1.473747,
+    "median_doy/cov80": 0.890244,
+    "median_doy/crps": 3.861374,
+    "median_doy/crps_skill": 0.013167,
+    "median_doy/mae": 4.839276,
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.830889,
+    "median_doy/rmse_skill": 0.025033,
+    "median_doy/width80": 22.462999
+   }
+  },
+  {
+   "id": "5ziyz097",
+   "name": "lightgbm_best-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:02:41Z",
+   "config": {
+    "model": "lightgbm_best",
+    "sweep": "46na5ws9",
+    "target": "logit",
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "logit/cov80": 0.902098,
+    "logit/crps": 0.209966,
+    "logit/crps_skill": -0.049026,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_361a9917a6c638f5d5be.table.json"
+    },
+    "logit/mae": 0.291816,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_49b3b0189069e7d1c4ca.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.386574,
+    "logit/rmse_skill": -0.0666,
+    "logit/width80": 1.314308
+   }
+  },
+  {
+   "id": "1hhse8kc",
+   "name": "lightgbm_best-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:02:46Z",
+   "config": {
+    "model": "lightgbm_best",
+    "sweep": "46na5ws9",
+    "target": "median_doy",
+    "num_leaves": 3,
+    "n_estimators": 100,
+    "learning_rate": 0.03,
+    "min_child_samples": 30
+   },
+   "summary": {
+    "median_doy/cov80": 0.902439,
+    "median_doy/crps": 3.900251,
+    "median_doy/crps_skill": 0.003232,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_1d094a8281bf17bc1616.table.json"
+    },
+    "median_doy/mae": 4.964649,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_5244e32ed53de0a44e92.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.805678,
+    "median_doy/rmse_skill": 0.028631,
+    "median_doy/width80": 22.46302
+   }
+  },
+  {
+   "id": "t84u8rba",
+   "name": "hierarchical-logit",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:03:38Z",
+   "config": {
+    "tune": 1000,
+    "draws": 1000,
+    "model": "hierarchical",
+    "chains": 4,
+    "target": "logit",
+    "features": [
+     "fall_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ],
+    "rows_fit": 150,
+    "progressbar": false,
+    "target_accept": 0.95
+   },
+   "summary": {
+    "full.beta_mean.fall_prcp": 0.0691,
+    "full.beta_mean.freeze_days": 0.0795,
+    "full.beta_mean.gdd_mar1": 0.0524,
+    "full.beta_mean.summer_pdsi": 0.0068,
+    "full.beta_mean.winter_prcp": 0.0592,
+    "full.beta_mean.winter_tavg": -0.0753,
+    "full.beta_q05.fall_prcp": -0.0477,
+    "full.beta_q05.freeze_days": -0.0481,
+    "full.beta_q05.gdd_mar1": -0.0871,
+    "full.beta_q05.summer_pdsi": -0.0901,
+    "full.beta_q05.winter_prcp": -0.0593,
+    "full.beta_q05.winter_tavg": -0.249,
+    "full.beta_q95.fall_prcp": 0.1825,
+    "full.beta_q95.freeze_days": 0.2073,
+    "full.beta_q95.gdd_mar1": 0.2067,
+    "full.beta_q95.summer_pdsi": 0.1007,
+    "full.beta_q95.winter_prcp": 0.1748,
+    "full.beta_q95.winter_tavg": 0.0846,
+    "full.counties": 15,
+    "full.divergences": 0,
+    "full.ess_bulk_min": 1023.4769,
+    "full.p_abs_fall_gt_abs_winter_tavg": 0.455,
+    "full.p_beta_positive.fall_prcp": 0.8428,
+    "full.p_beta_positive.freeze_days": 0.8465,
+    "full.p_beta_positive.gdd_mar1": 0.7225,
+    "full.p_beta_positive.summer_pdsi": 0.5555,
+    "full.p_beta_positive.winter_prcp": 0.7945,
+    "full.p_beta_positive.winter_tavg": 0.23,
+    "full.ppc_cov80": 0.98,
+    "full.ratio_median_fall_over_winter_tavg": 0.87928,
+    "full.rhat_max": 1.0068,
+    "full.rows": 150,
+    "full.sigma_c": 0.469686,
+    "full.sigma_y": 0.141895,
+    "logit/cov80": 0.916084,
+    "logit/crps": 0.247403,
+    "logit/crps_skill": -0.236065,
+    "logit/loyo_predictions": {
+     "file": "media/table/logit/loyo_predictions_0_1a45549dd76d7a65fe58.table.json"
+    },
+    "logit/mae": 0.33557,
+    "logit/mse_by_spring": {
+     "file": "media/table/logit/mse_by_spring_1_80a9670bf762913f7dc3.table.json"
+    },
+    "logit/n_rows": 143,
+    "logit/n_springs": 10,
+    "logit/rmse": 0.442981,
+    "logit/rmse_skill": -0.222234,
+    "logit/width80": 1.522319
+   }
+  },
+  {
+   "id": "l7qk074s",
+   "name": "hierarchical-median_doy",
+   "group": "ladder",
+   "job_type": "loyo",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:04:26Z",
+   "config": {
+    "tune": 1000,
+    "draws": 1000,
+    "model": "hierarchical",
+    "chains": 4,
+    "target": "median_doy",
+    "features": [
+     "fall_prcp",
+     "winter_prcp",
+     "winter_tavg",
+     "freeze_days",
+     "gdd_mar1",
+     "summer_pdsi"
+    ],
+    "rows_fit": 82,
+    "progressbar": false,
+    "target_accept": 0.95
+   },
+   "summary": {
+    "full.beta_mean.fall_prcp": 0.5214,
+    "full.beta_mean.freeze_days": -0.2946,
+    "full.beta_mean.gdd_mar1": -2.1148,
+    "full.beta_mean.summer_pdsi": -0.5315,
+    "full.beta_mean.winter_prcp": -1.8693,
+    "full.beta_mean.winter_tavg": -1.5519,
+    "full.beta_q05.fall_prcp": -1.3167,
+    "full.beta_q05.freeze_days": -2.4182,
+    "full.beta_q05.gdd_mar1": -4.283,
+    "full.beta_q05.summer_pdsi": -2.2364,
+    "full.beta_q05.winter_prcp": -3.8559,
+    "full.beta_q05.winter_tavg": -3.8568,
+    "full.beta_q95.fall_prcp": 2.3852,
+    "full.beta_q95.freeze_days": 1.7133,
+    "full.beta_q95.gdd_mar1": 0.1487,
+    "full.beta_q95.summer_pdsi": 1.0793,
+    "full.beta_q95.winter_prcp": 0.1885,
+    "full.beta_q95.winter_tavg": 0.9518,
+    "full.counties": 14,
+    "full.divergences": 0,
+    "full.ess_bulk_min": 1065.9191,
+    "full.p_abs_fall_gt_abs_gdd_mar1": 0.2215,
+    "full.p_beta_positive.fall_prcp": 0.6798,
+    "full.p_beta_positive.freeze_days": 0.408,
+    "full.p_beta_positive.gdd_mar1": 0.0632,
+    "full.p_beta_positive.summer_pdsi": 0.3022,
+    "full.p_beta_positive.winter_prcp": 0.0678,
+    "full.p_beta_positive.winter_tavg": 0.1378,
+    "full.ppc_cov80": 0.890244,
+    "full.ratio_median_fall_over_gdd_mar1": 0.39571,
+    "full.rhat_max": 1.0041,
+    "full.rows": 82,
+    "full.sigma_c": 6.674346,
+    "full.sigma_y": 1.314488,
+    "median_doy/cov80": 0.878049,
+    "median_doy/crps": 3.485737,
+    "median_doy/crps_skill": 0.109167,
+    "median_doy/loyo_predictions": {
+     "file": "media/table/median_doy/loyo_predictions_0_cfb6019de61bfe3708d0.table.json"
+    },
+    "median_doy/mae": 4.706162,
+    "median_doy/mse_by_spring": {
+     "file": "media/table/median_doy/mse_by_spring_1_49927277f525b31841eb.table.json"
+    },
+    "median_doy/n_rows": 82,
+    "median_doy/n_springs": 9,
+    "median_doy/rmse": 6.614656,
+    "median_doy/rmse_skill": 0.055896,
+    "median_doy/width80": 17.349851
+   }
+  },
+  {
+   "id": "9xrxkr5d",
+   "name": "hypotheses",
+   "group": "analysis",
+   "job_type": "analysis",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:04:44Z",
+   "config": {
+    "bootstrap": 10000
+   },
+   "summary": {
+    "H1_primary_2017_2026/per_spring/2017/code": 2,
+    "H1_primary_2017_2026/per_spring/2017/logit": -4.1184,
+    "H1_primary_2017_2026/per_spring/2017/per_1000": 15.9,
+    "H1_primary_2017_2026/per_spring/2018/code": 2,
+    "H1_primary_2017_2026/per_spring/2018/logit": -3.9431,
+    "H1_primary_2017_2026/per_spring/2018/per_1000": 18.99,
+    "H1_primary_2017_2026/per_spring/2019/code": 2,
+    "H1_primary_2017_2026/per_spring/2019/logit": -3.8662,
+    "H1_primary_2017_2026/per_spring/2019/per_1000": 20.49,
+    "H1_primary_2017_2026/per_spring/2020/code": 1,
+    "H1_primary_2017_2026/per_spring/2020/logit": -4.0554,
+    "H1_primary_2017_2026/per_spring/2020/per_1000": 17.02,
+    "H1_primary_2017_2026/per_spring/2021/code": 1,
+    "H1_primary_2017_2026/per_spring/2021/logit": -4.1404,
+    "H1_primary_2017_2026/per_spring/2021/per_1000": 15.65,
+    "H1_primary_2017_2026/per_spring/2022/code": 1,
+    "H1_primary_2017_2026/per_spring/2022/logit": -4.0799,
+    "H1_primary_2017_2026/per_spring/2022/per_1000": 16.61,
+    "H1_primary_2017_2026/per_spring/2023/code": 2,
+    "H1_primary_2017_2026/per_spring/2023/logit": -4.074,
+    "H1_primary_2017_2026/per_spring/2023/per_1000": 16.71,
+    "H1_primary_2017_2026/per_spring/2024/code": 2,
+    "H1_primary_2017_2026/per_spring/2024/logit": -4.0174,
+    "H1_primary_2017_2026/per_spring/2024/per_1000": 17.67,
+    "H1_primary_2017_2026/per_spring/2025/code": 0,
+    "H1_primary_2017_2026/per_spring/2025/logit": -4.3098,
+    "H1_primary_2017_2026/per_spring/2025/per_1000": 13.25,
+    "H1_primary_2017_2026/per_spring/2026/code": 0,
+    "H1_primary_2017_2026/per_spring/2026/logit": -4.3298,
+    "H1_primary_2017_2026/per_spring/2026/per_1000": 12.99,
+    "H1_primary_2017_2026/spearman_rho": 0.763224,
+    "H1_primary_2017_2026/supported": true,
+    "H1_sensitivity_flowering_annotation/rho_with_all_records_index": -0.29697,
+    "H1_sensitivity_flowering_annotation/spearman_rho": -0.289499,
+    "H1_with_2016/per_spring/2016/code": 2,
+    "H1_with_2016/per_spring/2016/logit": -3.6198,
+    "H1_with_2016/per_spring/2016/per_1000": 25.72,
+    "H1_with_2016/per_spring/2017/code": 2,
+    "H1_with_2016/per_spring/2017/logit": -4.1184,
+    "H1_with_2016/per_spring/2017/per_1000": 15.9,
+    "H1_with_2016/per_spring/2018/code": 2,
+    "H1_with_2016/per_spring/2018/logit": -3.9431,
+    "H1_with_2016/per_spring/2018/per_1000": 18.99,
+    "H1_with_2016/per_spring/2019/code": 2,
+    "H1_with_2016/per_spring/2019/logit": -3.8662,
+    "H1_with_2016/per_spring/2019/per_1000": 20.49,
+    "H1_with_2016/per_spring/2020/code": 1,
+    "H1_with_2016/per_spring/2020/logit": -4.0554,
+    "H1_with_2016/per_spring/2020/per_1000": 17.02,
+    "H1_with_2016/per_spring/2021/code": 1,
+    "H1_with_2016/per_spring/2021/logit": -4.1404,
+    "H1_with_2016/per_spring/2021/per_1000": 15.65,
+    "H1_with_2016/per_spring/2022/code": 1,
+    "H1_with_2016/per_spring/2022/logit": -4.0799,
+    "H1_with_2016/per_spring/2022/per_1000": 16.61,
+    "H1_with_2016/per_spring/2023/code": 2,
+    "H1_with_2016/per_spring/2023/logit": -4.074,
+    "H1_with_2016/per_spring/2023/per_1000": 16.71,
+    "H1_with_2016/per_spring/2024/code": 2,
+    "H1_with_2016/per_spring/2024/logit": -4.0174,
+    "H1_with_2016/per_spring/2024/per_1000": 17.67,
+    "H1_with_2016/per_spring/2025/code": 0,
+    "H1_with_2016/per_spring/2025/logit": -4.3098,
+    "H1_with_2016/per_spring/2025/per_1000": 13.25,
+    "H1_with_2016/per_spring/2026/code": 0,
+    "H1_with_2016/per_spring/2026/logit": -4.3298,
+    "H1_with_2016/per_spring/2026/per_1000": 12.99,
+    "H1_with_2016/spearman_rho": 0.768854,
+    "H1_with_2016/supported": true,
+    "H2/fall_vs_climatology/loss_a": 0.14894,
+    "H2/fall_vs_climatology/loss_b": 0.144226,
+    "H2/fall_vs_climatology/mean_diff": -0.004715,
+    "H2/fall_vs_climatology/n_springs": 10,
+    "H2/fall_vs_climatology/per_spring/2017": 0.0048,
+    "H2/fall_vs_climatology/per_spring/2018": -0.07299,
+    "H2/fall_vs_climatology/per_spring/2019": 0.00929,
+    "H2/fall_vs_climatology/per_spring/2020": 0.00093,
+    "H2/fall_vs_climatology/per_spring/2021": 0.00208,
+    "H2/fall_vs_climatology/per_spring/2022": -0.00873,
+    "H2/fall_vs_climatology/per_spring/2023": 0.00058,
+    "H2/fall_vs_climatology/per_spring/2024": -0.00142,
+    "H2/fall_vs_climatology/per_spring/2025": 0.00972,
+    "H2/fall_vs_climatology/per_spring/2026": 0.00861,
+    "H2/fall_vs_climatology/springs_a_better": 7,
+    "H2/hierarchical_beta/beta_mean/fall_prcp": 0.0691,
+    "H2/hierarchical_beta/beta_mean/freeze_days": 0.0795,
+    "H2/hierarchical_beta/beta_mean/gdd_mar1": 0.0524,
+    "H2/hierarchical_beta/beta_mean/summer_pdsi": 0.0068,
+    "H2/hierarchical_beta/beta_mean/winter_prcp": 0.0592,
+    "H2/hierarchical_beta/beta_mean/winter_tavg": -0.0753,
+    "H2/hierarchical_beta/beta_q05/fall_prcp": -0.0477,
+    "H2/hierarchical_beta/beta_q05/freeze_days": -0.0481,
+    "H2/hierarchical_beta/beta_q05/gdd_mar1": -0.0871,
+    "H2/hierarchical_beta/beta_q05/summer_pdsi": -0.0901,
+    "H2/hierarchical_beta/beta_q05/winter_prcp": -0.0593,
+    "H2/hierarchical_beta/beta_q05/winter_tavg": -0.249,
+    "H2/hierarchical_beta/beta_q95/fall_prcp": 0.1825,
+    "H2/hierarchical_beta/beta_q95/freeze_days": 0.2073,
+    "H2/hierarchical_beta/beta_q95/gdd_mar1": 0.2067,
+    "H2/hierarchical_beta/beta_q95/summer_pdsi": 0.1007,
+    "H2/hierarchical_beta/beta_q95/winter_prcp": 0.1748,
+    "H2/hierarchical_beta/beta_q95/winter_tavg": 0.0846,
+    "H2/hierarchical_beta/p_beta_positive/fall_prcp": 0.8428,
+    "H2/hierarchical_beta/p_beta_positive/freeze_days": 0.8465,
+    "H2/hierarchical_beta/p_beta_positive/gdd_mar1": 0.7225,
+    "H2/hierarchical_beta/p_beta_positive/summer_pdsi": 0.5555,
+    "H2/hierarchical_beta/p_beta_positive/winter_prcp": 0.7945,
+    "H2/hierarchical_beta/p_beta_positive/winter_tavg": 0.23,
+    "H2/hierarchical_p_abs_fall_gt_abs_winter_tavg": 0.455,
+    "H2/loss_a": 0.14894,
+    "H2/loss_b": 0.160128,
+    "H2/mean_diff": 0.011188,
+    "H2/n_springs": 10,
+    "H2/per_spring/2017": 0.12525,
+    "H2/per_spring/2018": -0.08071,
+    "H2/per_spring/2019": 0.00199,
+    "H2/per_spring/2020": -0.00179,
+    "H2/per_spring/2021": 0.05842,
+    "H2/per_spring/2022": 0.00112,
+    "H2/per_spring/2023": -0.00659,
+    "H2/per_spring/2024": -0.00026,
+    "H2/per_spring/2025": 0.01855,
+    "H2/per_spring/2026": -0.0041,
+    "H2/springs_a_better": 5,
+    "H2/verdict": "not distinguishable at n = 10 springs",
+    "H2/winter_vs_climatology/loss_a": 0.160128,
+    "H2/winter_vs_climatology/loss_b": 0.144226,
+    "H2/winter_vs_climatology/mean_diff": -0.015903,
+    "H2/winter_vs_climatology/n_springs": 10,
+    "H2/winter_vs_climatology/per_spring/2017": -0.12045,
+    "H2/winter_vs_climatology/per_spring/2018": 0.00771,
+    "H2/winter_vs_climatology/per_spring/2019": 0.0073,
+    "H2/winter_vs_climatology/per_spring/2020": 0.00272,
+    "H2/winter_vs_climatology/per_spring/2021": -0.05635,
+    "H2/winter_vs_climatology/per_spring/2022": -0.00985,
+    "H2/winter_vs_climatology/per_spring/2023": 0.00717,
+    "H2/winter_vs_climatology/per_spring/2024": -0.00116,
+    "H2/winter_vs_climatology/per_spring/2025": -0.00883,
+    "H2/winter_vs_climatology/per_spring/2026": 0.01271,
+    "H2/winter_vs_climatology/springs_a_better": 5,
+    "H3/gdd_vs_climatology/loss_a": 4.875982,
+    "H3/gdd_vs_climatology/loss_b": 5.531679,
+    "H3/gdd_vs_climatology/mean_diff": 0.655696,
+    "H3/gdd_vs_climatology/n_springs": 9,
+    "H3/gdd_vs_climatology/per_spring/2018": -0.82689,
+    "H3/gdd_vs_climatology/per_spring/2019": 0.42221,
+    "H3/gdd_vs_climatology/per_spring/2020": 0.33862,
+    "H3/gdd_vs_climatology/per_spring/2021": 1.46006,
+    "H3/gdd_vs_climatology/per_spring/2022": 2.96724,
+    "H3/gdd_vs_climatology/per_spring/2023": 0.18332,
+    "H3/gdd_vs_climatology/per_spring/2024": 0.10279,
+    "H3/gdd_vs_climatology/per_spring/2025": 0.40046,
+    "H3/gdd_vs_climatology/per_spring/2026": 0.85345,
+    "H3/gdd_vs_climatology/springs_a_better": 8,
+    "H3/hierarchical_beta/beta_mean/fall_prcp": 0.5214,
+    "H3/hierarchical_beta/beta_mean/freeze_days": -0.2946,
+    "H3/hierarchical_beta/beta_mean/gdd_mar1": -2.1148,
+    "H3/hierarchical_beta/beta_mean/summer_pdsi": -0.5315,
+    "H3/hierarchical_beta/beta_mean/winter_prcp": -1.8693,
+    "H3/hierarchical_beta/beta_mean/winter_tavg": -1.5519,
+    "H3/hierarchical_beta/beta_q05/fall_prcp": -1.3167,
+    "H3/hierarchical_beta/beta_q05/freeze_days": -2.4182,
+    "H3/hierarchical_beta/beta_q05/gdd_mar1": -4.283,
+    "H3/hierarchical_beta/beta_q05/summer_pdsi": -2.2364,
+    "H3/hierarchical_beta/beta_q05/winter_prcp": -3.8559,
+    "H3/hierarchical_beta/beta_q05/winter_tavg": -3.8568,
+    "H3/hierarchical_beta/beta_q95/fall_prcp": 2.3852,
+    "H3/hierarchical_beta/beta_q95/freeze_days": 1.7133,
+    "H3/hierarchical_beta/beta_q95/gdd_mar1": 0.1487,
+    "H3/hierarchical_beta/beta_q95/summer_pdsi": 1.0793,
+    "H3/hierarchical_beta/beta_q95/winter_prcp": 0.1885,
+    "H3/hierarchical_beta/beta_q95/winter_tavg": 0.9518,
+    "H3/hierarchical_beta/p_beta_positive/fall_prcp": 0.6798,
+    "H3/hierarchical_beta/p_beta_positive/freeze_days": 0.408,
+    "H3/hierarchical_beta/p_beta_positive/gdd_mar1": 0.0632,
+    "H3/hierarchical_beta/p_beta_positive/summer_pdsi": 0.3022,
+    "H3/hierarchical_beta/p_beta_positive/winter_prcp": 0.0678,
+    "H3/hierarchical_beta/p_beta_positive/winter_tavg": 0.1378,
+    "H3/hierarchical_p_abs_fall_gt_abs_gdd": 0.2215,
+    "H3/loss_a": 4.875982,
+    "H3/loss_b": 5.658365,
+    "H3/mean_diff": 0.782383,
+    "H3/n_springs": 9,
+    "H3/per_spring/2018": -0.88738,
+    "H3/per_spring/2019": 1.53888,
+    "H3/per_spring/2020": 0.41229,
+    "H3/per_spring/2021": 1.40188,
+    "H3/per_spring/2022": 2.91989,
+    "H3/per_spring/2023": 0.27706,
+    "H3/per_spring/2024": 0.1134,
+    "H3/per_spring/2025": 0.22548,
+    "H3/per_spring/2026": 1.03994,
+    "H3/springs_a_better": 8,
+    "H3/verdict": "supported (gdd_mar1 better)",
+    "H4_logit/hierarchical_rmse": 0.442981,
+    "H4_logit/hierarchical_within_5pct": false,
+    "H4_logit/lightgbm_not_better": false,
+    "H4_logit/lightgbm_rmse": 0.386574,
+    "H4_logit/lightgbm_variant": "lightgbm_best",
+    "H4_logit/ridge_rmse": 0.399978,
+    "H4_logit/supported": false,
+    "H4_median_doy/hierarchical_rmse": 6.614656,
+    "H4_median_doy/hierarchical_within_5pct": true,
+    "H4_median_doy/lightgbm_not_better": true,
+    "H4_median_doy/lightgbm_rmse": 6.805678,
+    "H4_median_doy/lightgbm_variant": "lightgbm_best",
+    "H4_median_doy/ridge_rmse": 6.650845,
+    "H4_median_doy/supported": true,
+    "H5/hierarchical_rmse_thin": 0.449006,
+    "H5/n_rows_thin": 73,
+    "H5/per_county_rmse_thin": 0.417887,
+    "H5/supported": false,
+    "H6_logit/all_within_70_90": false,
+    "H6_logit/cov80/hierarchical": 0.916084,
+    "H6_logit/cov80/lightgbm_best": 0.902098,
+    "H6_logit/cov80/ridge": 0.895105,
+    "H6_median_doy/all_within_70_90": false,
+    "H6_median_doy/cov80/hierarchical": 0.878049,
+    "H6_median_doy/cov80/lightgbm_best": 0.902439,
+    "H6_median_doy/cov80/ridge": 0.902439,
+    "sensitivity/H2_with_2016/loss_a": 0.151901,
+    "sensitivity/H2_with_2016/loss_b": 0.165442,
+    "sensitivity/H2_with_2016/mean_diff": 0.013541,
+    "sensitivity/H2_with_2016/n_springs": 11,
+    "sensitivity/H2_with_2016/springs_a_better": 7,
+    "sensitivity/climatology_mse": 0.144226,
+    "sensitivity/ols_fall_prcp_mse": 0.14894,
+    "sensitivity/ols_freeze_days_mse": 0.15211,
+    "sensitivity/ols_gdd_mar1_mse": 0.157526,
+    "sensitivity/ols_octdec_prcp_mse": 0.142984,
+    "sensitivity/ols_sepoct_prcp_mse": 0.145103,
+    "sensitivity/ols_summer_pdsi_mse": 0.146801,
+    "sensitivity/ols_winter_prcp_mse": 0.143957,
+    "sensitivity/ols_winter_tavg_mse": 0.160128
+   }
+  },
+  {
+   "id": "8ndoyvhn",
+   "name": "forecast-2026-10",
+   "group": "forecast",
+   "job_type": "forecast",
+   "state": "finished",
+   "sweep": null,
+   "tags": [],
+   "notes": null,
+   "created_at": "2026-09-25T15:06:18Z",
+   "config": {
+    "issue": "forecast-2026-10",
+    "observed_through": "2026-08"
+   },
+   "summary": {
+    "forecast": {
+     "file": "media/table/forecast_0_5c8a6e6c5520c16e89ec.table.json"
+    }
+   }
+  }
+ ]
+}

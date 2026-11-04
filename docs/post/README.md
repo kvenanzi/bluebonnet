@@ -192,7 +192,18 @@ The per-spring difference in mean absolute error, fall minus growing degree days
 | M3 LightGBM, sweep best | 0.387 | −0.049 | 0.90 | 6.81 | +0.003 | 0.90 |
 | M4 hierarchical | 0.443 | −0.236 | 0.92 | 6.61 | +0.109 | 0.88 |
 
-For strength, no rung improves on climatology. Persistence is the worst rung for both targets (−0.30 and −0.27), which gives no support to a seed bank carrying one year's bloom into the next at the scale of a county. The LightGBM sweep ([W&B](https://wandb.ai/within-noise/bluebonnet-bloom/sweeps/46na5ws9)) chose the smallest configuration in its grid (learning rate 0.03, 100 trees, at least 30 rows per leaf; 3, 7, and 15 leaves gave identical results because 30 rows per leaf allows at most four leaves), the configuration closest to predicting no change; the least constrained cell had strength RMSE 0.524. Choosing the cell by the same leave-one-year-out that reports it favors LightGBM, and the tuned model still does not reach climatology.
+For strength, no rung improves on climatology. Persistence is the worst rung for both targets (−0.30 and −0.27), which gives no support to a seed bank carrying one year's bloom into the next at the scale of a county. The LightGBM sweep (`46na5ws9`) chose the smallest configuration in its grid (learning rate 0.03, 100 trees, at least 30 rows per leaf; 3, 7, and 15 leaves gave identical results because 30 rows per leaf allows at most four leaves), the configuration closest to predicting no change; the least constrained cell had strength RMSE 0.524. Choosing the cell by the same leave-one-year-out that reports it favors LightGBM, and the tuned model still does not reach climatology.
+
+<!-- qmd
+::: {.column-page-right}
+```{=html}
+<iframe src="figures/sweep_lgbm.html" title="The 24 cells of the LightGBM sweep, parallel coordinates"
+        loading="lazy" style="border:none;width:100%;height:460px"></iframe>
+```
+:::
+-->
+
+The interactive chart [`figures/sweep_lgbm.html`](figures/sweep_lgbm.html) draws each of the 24 cells as a line from its four settings to its leave-one-year-out RMSE for strength and timing, with the lowest RMSE at the top of each score axis; dragging along an axis selects a range and highlights the cells in it.
 
 For strength, the tuned LightGBM (RMSE 0.387) is lower than ridge (0.400), and M4 (0.443) is more than 5% above both. **H4 is not supported for strength.** For timing, LightGBM (6.81) is not lower than ridge (6.65), and M4 (6.61) is within 5% of the better; **H4 is supported for timing.** M4's poor strength score has two sources. Its six weather coefficients move predictions away from the county mean in springs such as 2022 (mean error −0.58 logit against climatology's −0.10). And its predictive distribution is wider than climatology's (mean 80% width 1.52 against 1.26 logit), because the Beta-Binomial overdispersion (φ = 337) implies a county-spring standard deviation in the bluebonnet share of about 39% before any year effect is added.
 
@@ -300,21 +311,11 @@ On or after 15 May 2027, the 2027 values are computed by the code at tag `foreca
 - **Code, pre-registration, year codes, and forecasts:** [github.com/kvenanzi/bluebonnet](https://github.com/kvenanzi/bluebonnet). Thirteen numbered scripts take the public APIs to the registered forecast and, in May, to the grade; primers cover the [modeling methods](../modeling-primer.md) and the [plant and the data](../phenology-primer.md).
 - **Dataset:** [kvenanzi/texas-bluebonnet-seasons](https://huggingface.co/datasets/kvenanzi/texas-bluebonnet-seasons): the county-spring table (aggregate counts and weather z-scores, no individual observations), the pre-registration, and every forecast with its samples.
 - **Model:** [kvenanzi/bluebonnet-bloom-forecast](https://huggingface.co/kvenanzi/bluebonnet-bloom-forecast): posterior draws of both hierarchical models (NetCDF), ridge coefficients, the LightGBM model, and leave-one-year-out scores.
-- **Every run:** the W&B project [within-noise/bluebonnet-bloom](https://wandb.ai/within-noise/bluebonnet-bloom) holds the ladder, the sweep, the hierarchical fits, and the forecast artifact; the [W&B Report](https://wandb.ai/within-noise/bluebonnet-bloom/reports/Texas-bluebonnet-bloom:-fall-rain,-winter-warmth,-and-a-registered-forecast-for-2027--VmlldzoxODAwNjAyNg==) presents them with live panels.
-
-<!-- qmd
-::: {.column-page-right}
-```{=html}
-<iframe src="https://wandb.ai/within-noise/bluebonnet-bloom/reports/Texas-bluebonnet-bloom:-fall-rain,-winter-warmth,-and-a-registered-forecast-for-2027--VmlldzoxODAwNjAyNg=="
-        title="W&B Report: Texas bluebonnet bloom, fall rain, winter warmth, and a registered forecast for 2027"
-        loading="lazy" style="border:none;width:100%;height:900px"></iframe>
-```
-:::
--->
+- **Every run:** [`figures/runs.json`](figures/runs.json) lists the 48 runs of the project with their configuration and final metrics: the dataset upload, the ladder, the sweep, the hypothesis tests, and the forecast. The runs were tracked in Weights & Biases (project `within-noise/bluebonnet-bloom`), and these records were exported from it on 2026-11-04.
 
 ## Appendix A: Experiment log
 
-All work was done on 25 September 2026, in the order below. Run identifiers are W&B run IDs in `within-noise/bluebonnet-bloom`.
+All work was done on 25 September 2026, in the order below. Run identifiers are the W&B run IDs listed in `figures/runs.json`.
 
 - **Feasibility.** Statewide yearly counts from the iNaturalist histogram endpoint, per-county counts for eight Austin-area counties, NOAA endpoints, and the CPC ENSO advisory. What was seen is listed in the pre-registration.
 - **Pre-registration** (commit `d005cc9`). Hypotheses, targets, predictors, inclusion rule, models, forecast protocol, grading. Revised before commit to count verifiable records uploaded by 15 May of the same spring, after noticing that historical and 2027 data would otherwise differ in upload lag.
