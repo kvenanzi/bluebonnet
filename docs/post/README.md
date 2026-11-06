@@ -6,9 +6,8 @@ description: "Ten springs of iNaturalist and NOAA data test whether fall rain or
 
 # Does Fall Rain Make a Good Bluebonnet Spring?
 
-*Testing what Texas wildflower experts say each year against ten springs of iNaturalist photographs, with a forecast for 2027.*
+*Testing what Texas wildflower experts say each year against ten springs of iNaturalist photographs, with a forecast for 2027 that will be scored in May 2027.*
 
-*Kevin Venanzi · first published 25 September 2026, rewritten 6 November 2026 · The forecast is still open and will be scored in May 2027.*
 
 Every February and March, wildflower experts in Austin tell reporters what kind of bluebonnet season to expect, and they explain it the same way. A good bloom comes from rain the fall before. A warm winter makes the flowers come early. In 2025 the Lady Bird Johnson Wildflower Center predicted fewer bluebonnets in the drier western part of the state and blamed the previous fall's drought ([Wildflower Center 2025](https://www.wildflower.org/pressroom/2025-wildflower-forecast)), and in 2026 its staff said a dry fall and a warm winter had produced a moderate, short season ([Fox 7 Austin, 18 March 2026](https://www.fox7austin.com/news/texas-experts-predict-moderate-bluebonnet-season-due-dry-fall-warm-winter)).
 
