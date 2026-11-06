@@ -1,7 +1,7 @@
 ---
 date: 2026-09-25
 date-modified: 2026-11-06
-pagetitle: "Does Fall Rain Make a Good Bluebonnet Spring?"
+description: "Ten springs of iNaturalist and NOAA data test whether fall rain or winter warmth drives the Texas bluebonnet bloom, with a registered forecast for 2027."
 ---
 
 # Does Fall Rain Make a Good Bluebonnet Spring?
@@ -158,7 +158,7 @@ On 25 September 2026, before any of the fall or winter weather was known, I issu
 
 - **Ten springs.** Every comparison between springs rests on ten of them. "Could not tell them apart" means exactly that for this sample. It is not evidence that fall rain and winter temperature matter equally.
 - **The measure counts attention, not plants.** It assumes that in an average spring, people give bluebonnets the same share of their plant photos year after year. The downward trend may mean that assumption is failing.
-- **Roadside sowing.** Much of what gets photographed was planted. Comparing each county with its own average removes fixed differences between counties, but not changes in sowing from year to year.
+- **Roadside sowing.** Some of what gets photographed was planted along roads. Comparing each county with its own average removes fixed differences between counties, but not changes in sowing from year to year.
 - **The median date is not the peak.** It depends on how long into the spring people keep photographing bluebonnets.
 - **The 2027 winter may be unlike the training winters,** as described above.
 
